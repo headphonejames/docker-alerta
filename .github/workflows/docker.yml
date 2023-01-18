@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
     env:
-      IMAGE_NAME: alerta/alerta-web
+      IMAGE_NAME: headphonejames/alerta-web
     steps:
       - name: Checkout
         uses: actions/checkout@v2

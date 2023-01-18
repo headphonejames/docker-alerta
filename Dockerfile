@@ -10,7 +10,7 @@ ARG VERSION
 
 ENV SERVER_VERSION=${VERSION}
 ENV CLIENT_VERSION=8.5.1
-ENV WEBUI_VERSION=8.7.0
+ENV WEBUI_VERSION=gr-test-1-17-23
 
 ENV NGINX_WORKER_PROCESSES=1
 ENV NGINX_WORKER_CONNECTIONS=1024
@@ -84,7 +84,7 @@ COPY install-plugins.sh /app/install-plugins.sh
 COPY plugins.txt /app/plugins.txt
 RUN /app/install-plugins.sh
 
-ADD https://github.com/alerta/alerta-webui/releases/download/v${WEBUI_VERSION}/alerta-webui.tar.gz /tmp/webui.tar.gz
+ADD https://github.com/G-Research/alerta-webui/releases/download/v${WEBUI_VERSION}/alerta-webui.tar.gz /tmp/webui.tar.gz
 RUN tar zxvf /tmp/webui.tar.gz -C /tmp && \
     mv /tmp/dist /web
 
